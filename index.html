@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WaveVision</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .fadeInText {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 3s, transform 3s;
+        }
+
+        .container:hover .fadeInText {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="fadeInText">
+            <!-- Company logo and name -->
+        </header>
+        
+        <main class="fadeInText">
+            <h1>WaveVision</h1>
+            <p>Elevating medical training for Extracorporeal Shockwave Treatment (ESWT) <br>
+                with state-of-the-art AR/VR visualization solutions.
+            </p>
+            <p><b>Coming soon...</b></p>
+        </main>
+        
+        <footer class="fadeInText">
+            <!-- Contact info or social media links -->
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.querySelector('.fadeInText').classList.add('active');
+            }, 500); // Trigger after a short delay
+        });
+    </script>
+</body>
+</html>
