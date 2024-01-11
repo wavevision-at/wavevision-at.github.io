@@ -3,7 +3,6 @@
 <head>
     <title>WaveVision</title>
     <style>
-        /* CSS styles */
         body, html {
             height: 100%;
             margin: 0;
@@ -13,48 +12,50 @@
         .container {
             height: 100%;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
+            overflow: hidden;
         }
 
         .fadeInText {
             opacity: 0;
             transform: translateX(-50px);
-            transition: opacity 5s, transform 5s;
+            transition: opacity 3s, transform 3s;
+        }
+
+        .fadeInText.active {
+            opacity: 1;
+            transform: translateX(0);
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header class="fadeInText">
-            <!-- Company logo and name -->
         </header>
         
         <main class="fadeInText">
             <h1>WaveVision</h1>
             <p>Elevating medical training for Extracorporeal Shockwave Treatment (ESWT) <br>
-            with state-of-the-art AR/VR visualization solutions.
+                with state-of-the-art AR/VR visualization solutions.
             </p>
-            <p>Coming Soon!</p>
+            <p><b>Coming soon...</b></p>
         </main>
         
         <footer class="fadeInText">
-            <!-- Contact info or social media links -->
         </footer>
     </div>
 
     <script>
-        // JavaScript to trigger fade-in effect immediately on page load
-        window.onload = function() {
-            var elements = document.querySelectorAll('.fadeInText');
-            elements.forEach(function(el) {
-                el.style.opacity = 1;
-                el.style.transform = 'translateX(0)';
-                el.style.transition = 'none'; // Removes the transition effect after the fade-in
-            });
-        };
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                var elements = document.querySelectorAll('.fadeInText');
+                for (var i = 0; i < elements.length; i++) {
+                    elements[i].classList.add('active');
+                }
+            }, 500);
+        });
     </script>
 </body>
 </html>
+
