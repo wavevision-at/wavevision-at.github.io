@@ -7,10 +7,12 @@
             height: 100%;
             margin: 0;
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
         }
 
         .container {
-            height: 100%;
+            flex: 1; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -27,6 +29,26 @@
             opacity: 1;
             transform: translateX(0);
         }
+
+        footer {
+            background-color: #f2f2f2;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            box-sizing: border-box;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: right;
+            align-items: right;
+            padding: 0 10px 0 0
+        }
+
+        footer img {
+            width: 100px; 
+            margin-right: 20px; 
+        }
     </style>
 </head>
 <body>
@@ -38,10 +60,14 @@
             <h1>WaveVision</h1>
             <p><b>Coming soon...</b></p>
         </main>
-        
-        <footer class="fadeInText">
-        </footer>
     </div>
+
+    <footer class="fadeInText">
+        <div class="footer-content">
+            <img src="img/aws.png" alt="Logo"> 
+            <p>Gefördert durch Seedfinancing - Deep Tech des BMAW bzw. des BMK abgewickelt durch die aws.</p>
+        </div>
+    </footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -55,4 +81,3 @@
     </script>
 </body>
 </html>
-
